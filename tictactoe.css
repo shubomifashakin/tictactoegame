@@ -1,0 +1,203 @@
+@import url("https://fonts.cdnfonts.com/css/antimatter");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+  position: relative;
+  font-family: "Antimatter", sans-serif;
+  transition: linear 0.3s;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  font-family: "Antimatter", sans-serif;
+}
+
+.container-game {
+  flex-basis: 70%;
+  position: relative;
+}
+
+.container-gameplay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-info {
+  flex-basis: 30%;
+  position: relative;
+}
+
+.container-info-inside {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+#info-winner {
+  color: #000;
+  transition: linear 0.3s;
+  font-size: 1.9rem;
+}
+.info-player {
+  font-size: 2.25rem;
+}
+
+.btn-restart {
+  background: #000;
+  color: #a50104;
+  border: solid 0.15rem #a50104;
+  outline: none;
+  padding: 0.25rem 0.35rem;
+  font-size: 1.35rem;
+  border-radius: 0.15rem;
+  font-family: "Antimatter", sans-serif;
+  margin-top: 1rem;
+  transition: linear 0.25s;
+  cursor: pointer;
+}
+.btn-restart:hover {
+  color: #fff;
+}
+
+.rows {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.tile {
+  height: 10rem;
+  width: 10rem;
+  margin-right: 0.5rem;
+  background: #000;
+  border: solid 0.15rem #a50104;
+  outline: none;
+  cursor: pointer;
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+  font-family: "Antimatter", sans-serif;
+}
+
+.tile:active {
+  transform: scale(-0.9);
+}
+
+.tile:hover {
+  background: #a50104;
+}
+
+/** choose letter **/
+
+.choose {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+  width: 21rem;
+}
+
+.choose-title {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #fff;
+}
+
+.choose-letter {
+  height: 10rem;
+  width: 10rem;
+  background: #000;
+  border: solid 0.15rem #a50104;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 5rem;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Antimatter", sans-serif;
+}
+
+.choose-letter:hover {
+  background: #a50104;
+}
+
+.choose-letter:active {
+  transform: scale(-0.9);
+}
+
+.background-blur {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
+}
+
+.chosen {
+  background: #a50104;
+}
+
+.change-borders {
+  border: solid 0.15rem #000;
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    overflow: hidden;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-game {
+    flex-basis: 60%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .tile {
+    height: 6rem;
+    width: 6rem;
+    margin-right: 0.5rem;
+  }
+
+  .container-info {
+    flex-basis: 40%;
+  }
+
+  .choose-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .choose-letter {
+    height: 6rem;
+    width: 6rem;
+  }
+}

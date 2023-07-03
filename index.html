@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tictactoe.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container-game">
+        <div class="container-gameplay">
+          <div class="rows row-1">
+            <button type="text" class="tile tile-1"></button>
+            <button type="text" class="tile tile-2"></button>
+            <button type="text" class="tile tile-3"></button>
+          </div>
+
+          <div class="rows row-2">
+            <button type="text" class="tile tile-4"></button>
+            <button type="text" class="tile tile-5"></button>
+            <button type="text" class="tile tile-6"></button>
+          </div>
+
+          <div class="rows row-3">
+            <button type="text" class="tile tile-7"></button>
+            <button type="text" class="tile tile-8"></button>
+            <button type="text" class="tile tile-9"></button>
+          </div>
+        </div>
+        <!--gameplay-->
+      </div>
+      <!--container game-->
+
+      <div class="container-info">
+        <div class="container-info-inside">
+          <p id="info-winner"></p>
+          <div class="info-player-1 info-player">
+            Player 1 : <span id="player-1-letter"></span>
+          </div>
+          <div class="info-player-2 info-player">
+            Player 2 : <span id="player-2-letter"></span>
+          </div>
+
+          <button type="button" class="btn-restart">RESTART</button>
+        </div>
+        <!--container info inside-->
+      </div>
+      <!--container info-->
+    </div>
+    <!--container-->
+
+    <div class="choose hidden">
+      <p class="choose-title">CHOOSE A LETTER</p>
+      <div class="choose-buttons">
+        <button type="button" class="choose-letter" id="letter-x">X</button>
+        <button type="button" class="choose-letter" id="letter-o">O</button>
+      </div>
+    </div>
+
+    <div class="background-blur hidden"></div>
+
+    <script src="tictactoe.js"></script>
+  </body>
+</html>
